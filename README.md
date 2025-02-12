@@ -10,7 +10,6 @@ This Todo App allows users to add, edit, delete, and mark tasks as completed. It
 
 ## Links:
 You can view the website here: [DEMO](https://irynamariiko00.github.io/todo-app-with-api__react/)<br>
-Mockup: [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
 
 ## Additional Instructions for Running the Project:
 1. Install dependencies by running the following command in the terminal: `npm install`
