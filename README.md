@@ -1,9 +1,17 @@
-# React TypeScript Starter Pack
+# Todo App
+## Project Description:
+This Todo App allows users to add, edit, delete, and mark tasks as completed. It also includes the ability to filter the task list by status: all, active, or completed.
 
-To use this template click `Use this template`
+## Technologies Used:
+- React – for building the user interface and managing component-based architecture.
+- TypeScript – for static typing, improving code reliability and maintainability.
+- HTML: Used predefined HTML
+- CSS: (with SCSS): Used predefined SCSS
 
-### Available Scripts
+## Links:
+You can view the website here: [DEMO](https://irynamariiko00.github.io/todo-app-with-api__react/)<br>
 
-`Deploy` - available to deploy your application to gh-pages, to deploy the project, change the second line of code in package.json, specifically the homepage value, from "." to the repository name
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+## Additional Instructions for Running the Project:
+1. Install dependencies by running the following command in the terminal: `npm install`
+2. To open the project in a browser, use the following command in the terminal: `npm start`
+Alternatively, you can open the HTML file directly in a browser.
