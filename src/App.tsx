@@ -24,6 +24,7 @@ export const App: React.FC = () => {
   const [isInputDisabled, setIsInputDisabled] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setError('');
@@ -90,8 +91,9 @@ export const App: React.FC = () => {
   const activeTodos = todos.filter(todo => !todo.completed && !todo.isPending);
 
   const handleClearCompleted = () => {
-    const completedTodos = todos.filter(todo => todo.completed);
+    setIsLoading(true);
 
+    const completedTodos = todos.filter(todo => todo.completed);
     const failedDeletions: Todo[] = [];
 
     Promise.all(
@@ -112,6 +114,7 @@ export const App: React.FC = () => {
       );
 
       setTodos(newTodos);
+      setIsLoading(false);
     });
   };
 
@@ -225,7 +228,7 @@ export const App: React.FC = () => {
               todo={todo}
               onToggleStatus={toggleTodoStatus}
               handleDeleteTodo={handleDeleteTodo}
-              isLoading={currentTodoIds.includes(todo.id)}
+              isLoading={currentTodoIds.includes(todo.id) || isLoading}
               onRenamingTodo={handleRenamingTodo}
             />
           ))}
